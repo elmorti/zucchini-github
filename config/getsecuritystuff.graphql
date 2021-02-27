@@ -1,0 +1,62 @@
+{
+  user(login: "mygithubusername") {
+    company
+    gists(orderBy: {field: CREATED_AT, direction: ASC}, first: 10) {
+      edges {
+        node {
+          id
+          name
+          isPublic
+          owner {
+            login
+          }
+          files {
+            name
+          }
+        }
+        cursor
+      }
+      nodes {
+        name
+      }
+    }
+    login
+    name
+    organizations(first: 10) {
+      nodes {
+        name
+        id
+      }
+    }
+    projects(last: 10) {
+      nodes {
+        name
+      }
+    }
+    publicKeys(last: 10) {
+      nodes {
+        isReadOnly
+        key
+        id
+        fingerprint
+        createdAt
+      }
+    }
+    repositories(first: 100, orderBy: {field: NAME, direction: ASC}) {
+      nodes {
+        deployKeys(first: 10) {
+          nodes {
+            createdAt
+            id
+            key
+            readOnly
+            title
+            verified
+          }
+        }
+        name
+        nameWithOwner
+      }
+    }
+  }
+}

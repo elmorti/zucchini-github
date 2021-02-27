@@ -1,0 +1,10 @@
+{
+  user(login: "%%%OWNER%%%") {
+    repositories(orderBy: {field: NAME, direction: ASC}, first: 100) {
+      totalCount
+      nodes {
+        name
+      }
+    }
+  }
+}

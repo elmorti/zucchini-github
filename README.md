@@ -1,2 +1,3 @@
-# zucchini-github
-Helper GitHub API scripts
+# Zucchini GitHub
+
+Helper GitHub API scripts for automation.

@@ -1,0 +1,1 @@
+curl -s -H "Accept: application/vnd.github.v3+json" -H "Authorization: bearer $(cat ~/github_token)" https://api.github.com/orgs/Zucchini-Universe/repos| jq .[].name | tr -d '"' | while read line; do sh list-repokeys.sh ~/github_token Zucchini-Universe $line; done
